@@ -102,9 +102,9 @@ function UpdateRank(l){
     l.sort(function(a,b) {return b.score-a.score});
     io.emit('server_username',listuser);
 }
-app.use(express.static(path.join(__dirname,"./client/public")));
+app.use(express.static(path.join(__dirname,"/client/public")));
 app.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname+"./client/public/index.html"));
+    res.sendFile(path.join(__dirname+'/client/public/index.html'));
 });
 
 server.listen(process.env.PORT || 3001);
