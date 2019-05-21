@@ -105,7 +105,8 @@ function UpdateRank(l){
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname,'client/public')));
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname+'/client/public/index.html'));
+    const index = path.join(__dirname, 'client', 'index.html');
+    res.sendFile(index);
 });
 
 const port = process.env.PORT || 3001;
