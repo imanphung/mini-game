@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "How fast can you type?",
   "main": "index.js",
+  "engines": {
+    "node": "11.11.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "heroku-postbuild": "cd client && yarn --production=false && yarn run build"
   },
   "author": "AnphungHCMUS",
   "license": "MIT",
