@@ -1,11 +1,12 @@
 {
   "name": "herokeyboard",
   "version": "1.0.0",
-  "description": "",
+  "description": "How fast can you type?",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && yarn --production=false && yarn run build"
   },
   "author": "AnphungHCMUS",
   "license": "MIT",
