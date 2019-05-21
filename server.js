@@ -102,9 +102,13 @@ function UpdateRank(l){
     l.sort(function(a,b) {return b.score-a.score});
     io.emit('server_username',listuser);
 }
-app.use(express.static(path.join(__dirname,"/client/public")));
-app.get('*',(req,res)=>{
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/public')));
+app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname+'/client/public/index.html'));
 });
 
-server.listen(process.env.PORT || 3001);
+const port = process.env.PORT || 3001;
+app.listen(port);
+
+console.log(`Password generator listening on ${port}`);

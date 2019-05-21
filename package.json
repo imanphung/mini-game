@@ -7,10 +7,8 @@
     "node": "11.11.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "ng build",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "AnphungHCMUS",
   "license": "MIT",
